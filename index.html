@@ -18,30 +18,48 @@
     <header class="header">
       <nav class="navbar">
         <div class="logo">
-          <img src="/static/logo.png" alt="Logo" />
+          <a href="/index.html" class="logo">
+            <img src="/static/logo.png" alt="Logo" />
+          </a>
         </div>
     </header>
-    <h1 class="animate__animated animate__fadeInUp" style="text-align: center; margin-top: 80px; color: white;">CSE Sentiment Analyser for stocks</h1>
+    <h1 class="animate__animated animate__fadeInUp" style="text-align: center; margin-top: 70px; color: white;">CSE Sentiment Analyser for stocks</h1>
 
-    <div class="wrapper animate__animated animate__fadeInUp animate__delay-0.9s">
+    <div class="intro animate__animated animate__fadeInUp">
+        <p>Sentiment Analyser est un outil puissant basé sur une combinaison de deux moteurs NLP, local et importé, pour extraire les sentiments perçus lors de la lecture d'articles de presse. Il cherche ces articles dans des sources fiables préalablement définies, afin de donner une idée de l'impression sur une entreprise cotée à la bourse de Casablanca. En effectuant son analyse, l'outil restitue un graphique de partage de sentiment, un wordcloud donnant une idée des mots les plus fréquemment rencontrés, ainsi qu'une analyse des répercussions potentielles du contenu des articles parcourus sur le cours de l'action en question.</p>
+            </div>
+    <div class="wrapper animate__animated animate__fadeInUp">
 
-      <div class="select-btn">
-        <span>Select Choice</span>
-        <i class="uil uil-angle-down"></i>
-      </div>
-      <div class="content">
-        <div class="search">
-          <i class="uil uil-search"></i>
-          <input spellcheck="false" type="text" placeholder="Search" />
-        </div>
-        <ul class="options"></ul>
-      </div>
-      <button> Launch Analysis
-      </button>
+      <a href="/search.html" class="button">Get started</a>
+
     </div>
 
-    
+
+<section class="animate__animated animate__fadeInUp animate__delay-1s">
+  <h1 style="text-align: center; margin-top: 50px; margin-bottom: 40px; color: white;">Les sources utilisées :</h1>
+  <div class="logos">
+    <div class="logos-slide">
+      <img src="./static/media24.png" />
+      <img src="./static/msn.png" />
+      <img src="./static/h24info.png" />
+      <img src="./static/leseco.png" />
+      <img src="./static/lepoint.png" />
+      <img src="./static/le360.png" />
+      <img src="./static/boursenews.png" />
+      <img src="./static/leconomiste.png" />
+      <img src="./static/telquel.png" />
+      <img src="./static/jeuneafrique.png" />
+      <img src="./static/lavieeco.png" />
+
+
+    </div>
+  </div>
+</section>
 
     <script src="script.js"></script>
+    <script>
+      var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+    </script>
   </body>
 </html>
