@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sentiment Analyzer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/index.html" class="logo">
+            <img src="/static/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <div class="line"></div>
+      </nav>
+    </header>
+    <h1
+      class="animate__animated animate__fadeInUp"
+      style="text-align: center; margin-top: 3vw; color: white"
+    >
+      Sentiment Analyser for stocks
+    </h1>
+
+    <div class="chartCard" style="margin-top: 2vw">
+      <div class="chartBox">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <div
+      class="custom-button wrapper animate__animated animate__fadeInUp"
+      style="margin-top: 1vw"
+    >
+      <a href="/search.html" class="button" style="margin-right: 10px"
+        >Generate wordcloud</a
+      >
+      <a href="/search.html" class="button" style="margin-left: 10px"
+        >AI analysis</a
+      >
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"
+    ></script>
+    <script>
+      // setup
+      const data = {
+        labels: ["Positive", "Negative", "Neutral"],
+        datasets: [
+          {
+            label: "Sentiment Analysis",
+            data: [70, 20, 10],
+            backgroundColor: [
+              "rgba(17, 228, 179, 0.6)",
+              "rgba(209, 23, 70, 0.6)",
+              "rgba(237, 197, 25, 0.6)",
+            ],
+            borderColor: [
+              "rgba(17, 228, 179, 1)",
+              "rgba(209, 23, 70, 1)",
+              "rgba(237, 197, 25, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      };
+
+      // config
+      const config = {
+        type: "doughnut",
+        data,
+        options: {},
+      };
+
+      // render init block
+      const myChart = new Chart(document.getElementById("myChart"), config);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
